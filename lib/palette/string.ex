@@ -11,7 +11,7 @@ defmodule Palette.String do
   end
 
   defp prefix(string, codes) do
-    matches = Regex.run ~r/\e\[([\d;]*)m(.*)/, string
+    matches = Regex.run ~r/\A\e\[([\d;]*)m(.*)/, string
     codes   = Enum.join codes, ";"
 
     if matches do

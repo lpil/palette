@@ -49,5 +49,11 @@ defmodule Palette.StringTest do
       assert String.starts_with?(string, desired_prefix),
              "#{inspect string} should start with #{inspect desired_prefix}"
     end
+
+    should "behave correctly with coloured substrings" do
+      IO.write "P"
+      # string = @subject.wrap("Hello, \e[4mWorld\e[0m!", 21)
+      # assert string == "\e[21mHello, \e[4mWorld\e[21m!\e[0m"
+    end
   end
 end
