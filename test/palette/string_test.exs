@@ -31,12 +31,23 @@ defmodule Palette.StringTest do
     end
 
     should "never have more than one suffix" do
-      one_suffix = "Hi!"
-                    |> @subject.wrap(21)
-                    |> @subject.wrap(31)
-                    |> @subject.wrap(4)
-                    |> String.ends_with?("Hi!\e[0m")
-      assert one_suffix
+      desired_suffix = "hi!\e[0m"
+      string = "hi!"
+                |> @subject.wrap(21)
+                |> @subject.wrap(31)
+                |> @subject.wrap(4)
+      assert String.ends_with?(string, desired_suffix),
+             "#{inspect string} should end with #{inspect desired_suffix}"
+    end
+
+    should "never have more than one prefix" do
+      desired_prefix = "\e[4;31;21mhi!"
+      string = "hi!"
+                |> @subject.wrap(21)
+                |> @subject.wrap(31)
+                |> @subject.wrap(4)
+      assert String.starts_with?(string, desired_prefix),
+             "#{inspect string} should start with #{inspect desired_prefix}"
     end
   end
 end

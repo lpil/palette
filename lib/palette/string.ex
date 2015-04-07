@@ -11,7 +11,14 @@ defmodule Palette.String do
   end
 
   defp prefix(string, codes) do
-    "\e[#{ Enum.join codes, ";" }m" <> string
+    matches = Regex.run ~r/\e\[([\d;]*)m(.*)/, string
+    codes   = Enum.join codes, ";"
+
+    if matches do
+      codes  = "#{ codes };#{ Enum.at matches, 1 }"
+      string = Enum.at(matches, 2)
+    end
+    "\e[#{ codes }m" <> string
   end
 
   defp apply_suffix(str) do
