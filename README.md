@@ -1,6 +1,8 @@
 Palette
 =======
 
+[![Build Status](https://travis-ci.org/lpil/palette.svg?branch=master)](https://travis-ci.org/lpil/elixre)
+
 A handy library for colouring strings to be printing on ANSI terminals.
 
 ## Usage
