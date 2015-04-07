@@ -30,5 +30,13 @@ defmodule Palette.StringTest do
       end
     end
 
+    should "never have more than one suffix" do
+      one_suffix = "Hi!"
+                    |> @subject.wrap(21)
+                    |> @subject.wrap(31)
+                    |> @subject.wrap(4)
+                    |> String.ends_with?("Hi!\e[0m")
+      assert one_suffix
+    end
   end
 end

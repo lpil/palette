@@ -5,12 +5,13 @@ defmodule Palette.String do
     string
   end
   def wrap(string, codes) do
-    prefix(List.wrap codes) <> string
+    string
+    |> prefix(List.wrap codes)
     |> apply_suffix
   end
 
-  defp prefix(codes) do
-    "\e[#{ Enum.join codes, ";" }m"
+  defp prefix(string, codes) do
+    "\e[#{ Enum.join codes, ";" }m" <> string
   end
 
   defp apply_suffix(str) do
