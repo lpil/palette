@@ -18,6 +18,7 @@ Or at least that's the idea. We're not finished yet.
 
 ## Licence
 
+```
 Palette - A handy library for colouring strings.
 Copyright © 2015 Louis Pilfold
 
@@ -38,3 +39,4 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
 DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
 OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
