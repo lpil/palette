@@ -12,7 +12,8 @@ defmodule Palette.Mixfile do
       package: [
         contributors: ["Louis Pilfold"],
         licenses: ["MIT"],
-        links: %{ "GitHub" => "https://github.com/lpil/palette" }
+        links: %{ "GitHub" => "https://github.com/lpil/palette" },
+        files: ~w(mix.exs lib README.md LICENCE)
       ]
     ]
   end
