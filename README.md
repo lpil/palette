@@ -1,7 +1,7 @@
 Palette
 =======
 
-[![Build Status](https://travis-ci.org/lpil/palette.svg?branch=master)](https://travis-ci.org/lpil/elixre)
+[![Build Status](https://travis-ci.org/lpil/palette.svg?branch=master)](https://travis-ci.org/lpil/palette)
 
 A handy library for colouring strings.
 
