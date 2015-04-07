@@ -1,0 +1,2 @@
+defmodule Palette do
+end
