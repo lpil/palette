@@ -51,9 +51,8 @@ defmodule Palette.StringTest do
     end
 
     should "behave correctly with coloured substrings" do
-      IO.write "P"
-      # string = @subject.wrap("Hello, \e[4mWorld\e[0m!", 21)
-      # assert string == "\e[21mHello, \e[4mWorld\e[21m!\e[0m"
+      string = @subject.wrap("Hello, \e[4mWorld\e[0m!", 21)
+      assert string == "\e[21mHello, \e[4mWorld\e[21m!\e[0m"
     end
   end
 end
