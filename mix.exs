@@ -9,6 +9,7 @@ defmodule Palette.Mixfile do
       deps: deps,
       name: "Palette",
       source_url: "https://github.com/lpil/palette",
+      description: "A handy library for colouring strings.",
       package: [
         contributors: ["Louis Pilfold"],
         licenses: ["MIT"],
