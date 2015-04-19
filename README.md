@@ -5,6 +5,8 @@ Palette
 
 A handy library for colouring strings.
 
+I say that. I made this before I learnt about the `IO.ANSI` module...
+
 ## Usage
 
 ```elixir

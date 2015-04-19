@@ -5,6 +5,15 @@ defmodule Palette.String do
     string
   end
   def wrap(string, codes) do
+    if IO.ANSI.enabled? do
+      do_wrap(string, codes)
+    else
+      string
+    end
+  end
+
+
+  defp do_wrap(string, codes) do
     codes = codes
             |> List.wrap
             |> Enum.join(";")
