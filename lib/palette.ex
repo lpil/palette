@@ -1,4 +1,15 @@
 defmodule Palette do
+
+  use Application
+  def start(_type, _args) do
+    import Supervisor.Spec, warn: false
+
+    children = [ worker(Palette.State, []) ]
+    opts     = [strategy: :one_for_one, name: Palette.Supervisor]
+
+    Supervisor.start_link(children, opts)
+  end
+
   alias Palette.String, as: S
   alias Palette.Colours, as: C
 
